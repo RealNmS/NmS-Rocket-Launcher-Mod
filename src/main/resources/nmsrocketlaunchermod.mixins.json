@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "com.nms.nmsrocketlaunchermod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["EnchantmentHelperMixin"],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

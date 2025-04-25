@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "nmsrocketlaunchermod",
+  "version": "${version}",
+  "name": "NmS' Rocket Launcher Mod",
+  "description": "Adds a rocket launcher that shoots rockets you can ride!",
+  "authors": ["NmS", "MichalBr"],
+  "contact": {
+    "homepage": "https://modrinth.com/project/nms-rocket-launcher-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/nmsrocketlaunchermod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.nms.nmsrocketlaunchermod.RocketLauncherMod"],
+    "client": ["com.nms.nmsrocketlaunchermod.client.RocketLauncherModClient"]
+  },
+  "mixins": ["nmsrocketlaunchermod.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.18.2",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": ">=3.2.5"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "NmS' LinkTree": "https://linktr.ee/onlynms",
+        "MichalBr's Website": "https://themichalbr.github.io/themichalbr/"
+      }
+    }
+  }
+}
