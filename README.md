@@ -28,4 +28,4 @@ Rocket Launcher             |  Riding a rocket
 - **Configurable Settings:** Adjust explosion radius, durability, cooldown, and more...
 - **Achievements/Advancements:** Unlockable milestones for rocket usage.
 - **Ports to newer versions:** ...like 1.19, 1.20 and 1.21.
-- **GitHub:** Releasing this project on Github, making it open-source, also allowing you to have a place to tell me any issues you have with the mod.
+- ~~**GitHub:** Releasing this project on Github, making it open-source, also allowing you to have a place to tell me any issues you have with the mod.~~ ✔️
