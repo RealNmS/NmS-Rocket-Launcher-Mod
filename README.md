@@ -24,8 +24,8 @@ Rocket Launcher             |  Riding a rocket
 - **Requires Fabric API** for Minecraft 1.18.2.
 - Download the *.jar* file and place it in your *mods* folder.
 
-## Planned Features (Not Guaranteed)
+## Planned Features
 - **Configurable Settings:** Adjust explosion radius, durability, cooldown, and more...
-- **Achievements/Advancements:** Unlockable milestones for rocket usage.
+- ~~**Achievements/Advancements:** Unlockable milestones for rocket usage.~~~ ✔️
 - **Ports to newer versions:** ...like 1.19, 1.20 and 1.21.
 - ~~**GitHub:** Releasing this project on Github, making it open-source, also allowing you to have a place to tell me any issues you have with the mod.~~ ✔️
