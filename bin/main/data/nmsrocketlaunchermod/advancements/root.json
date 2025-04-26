@@ -1,0 +1,27 @@
+{
+  "display": {
+    "title": "Rocket Engineering",
+    "description": "Craft your first rocket launcher!",
+    "background": "minecraft:textures/block/iron_block.png",
+    "icon": {
+      "item": "nmsrocketlaunchermod:rocket_launcher"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["nmsrocketlaunchermod:rocket_launcher"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["root"]]
+}
