@@ -1,7 +1,6 @@
 package com.nms.nmsrocketlaunchermod;
 
 import static com.nms.nmsrocketlaunchermod.item.ModItems.ROCKET_LAUNCHER;
-
 import com.nms.nmsrocketlaunchermod.item.RocketLauncherItem;
 
 import net.minecraft.enchantment.Enchantment;

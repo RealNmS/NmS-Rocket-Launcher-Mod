@@ -52,7 +52,7 @@ public class RocketEntityRenderer extends EntityRenderer<RocketEntity> {
         // matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(90));
 
         // Scale up
-        matrices.scale(2.5F, 2.5F, 2.5F);
+        matrices.scale(3.5F, 3.5F, 3.5F);
 
         MinecraftClient.getInstance().getItemRenderer().renderItem(
                 ROCKET_ITEM,
