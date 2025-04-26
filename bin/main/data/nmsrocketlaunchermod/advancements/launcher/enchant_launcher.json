@@ -2,7 +2,7 @@
   "parent": "nmsrocketlaunchermod:root",
   "display": {
     "title": "Fasterrrr!!!",
-    "description": "Enchant your Rocket Launcher with Reload",
+    "description": "Enchant your Rocket Launcher with Reload 3",
     "icon": {
       "item": "nmsrocketlaunchermod:rocket_launcher",
       "nbt": "{Enchantments:[{id:\"nmsrocketlaunchermod:reload\", lvl:3s}]}"
