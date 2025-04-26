@@ -1,0 +1,29 @@
+{
+  "parent": "nmsrocketlaunchermod:root",
+  "display": {
+    "title": "Fasterrrr!!!",
+    "description": "Enchant your Rocket Launcher with Reload",
+    "icon": {
+      "item": "nmsrocketlaunchermod:rocket_launcher",
+      "nbt": "{Enchantments:[{id:\"nmsrocketlaunchermod:reload\", lvl:3s}]}"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_enchanted_launcher": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["nmsrocketlaunchermod:rocket_launcher"],
+            "nbt": "{Enchantments:[{id:\"nmsrocketlaunchermod:reload\", lvl:3s}]}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["has_enchanted_launcher"]]
+}
