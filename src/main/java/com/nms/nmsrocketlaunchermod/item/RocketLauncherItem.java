@@ -32,7 +32,7 @@ public class RocketLauncherItem extends Item {
             new Identifier("nmsrocketlaunchermod", "rocket_launch"));
 
     public RocketLauncherItem(Settings settings) {
-        super(settings.maxDamage(256));
+        super(settings.maxDamage(64));
     }
 
     @Override
