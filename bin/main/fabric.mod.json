@@ -6,7 +6,9 @@
   "description": "Adds a rocket launcher that shoots rockets you can ride!",
   "authors": ["NmS", "MichalBr"],
   "contact": {
-    "homepage": "https://modrinth.com/project/nms-rocket-launcher-mod"
+    "homepage": "https://modrinth.com/project/nms-rocket-launcher-mod",
+    "sources": "https://github.com/RealNmS/NmS-Rocket-Launcher-Mod",
+    "issues": "https://github.com/RealNmS/NmS-Rocket-Launcher-Mod/issues"
   },
   "license": "CC0-1.0",
   "icon": "assets/nmsrocketlaunchermod/icon.png",
