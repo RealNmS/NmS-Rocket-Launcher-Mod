@@ -1,0 +1,23 @@
+{
+  "rocket_launch": {
+    "subtitle": "subtitles.nmsrocketlaunchermod.rocket_launch",
+    "sounds": [
+      {
+        "name": "nmsrocketlaunchermod:rocket_launch",
+        "attenuation_distance": 32,
+        "preload": true
+      }
+    ]
+  },
+  "rocket_loop": {
+    "subtitle": "subtitles.nmsrocketlaunchermod.rocket_loop",
+    "sounds": [
+      {
+        "name": "nmsrocketlaunchermod:rocket_loop",
+        "stream": true,
+        "attenuation_distance": 16,
+        "preload": true
+      }
+    ]
+  }
+}
