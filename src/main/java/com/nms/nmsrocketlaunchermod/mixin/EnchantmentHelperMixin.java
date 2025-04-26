@@ -1,20 +1,19 @@
 package com.nms.nmsrocketlaunchermod.mixin;
 
+import com.nms.nmsrocketlaunchermod.item.RocketLauncherItem;
+import static com.nms.nmsrocketlaunchermod.item.ModItems.ROCKET_LAUNCHER;
+
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentTarget;
+import static net.minecraft.enchantment.Enchantments.MENDING;
+import static net.minecraft.enchantment.Enchantments.UNBREAKING;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import com.nms.nmsrocketlaunchermod.item.RocketLauncherItem;
-
-import static com.nms.nmsrocketlaunchermod.item.ModItems.ROCKET_LAUNCHER;
-import static net.minecraft.enchantment.Enchantments.MENDING;
-import static net.minecraft.enchantment.Enchantments.UNBREAKING;
 
 @Mixin(EnchantmentHelper.class)
 public abstract class EnchantmentHelperMixin {

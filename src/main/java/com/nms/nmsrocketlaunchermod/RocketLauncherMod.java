@@ -1,15 +1,13 @@
 package com.nms.nmsrocketlaunchermod;
 
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.sound.SoundEvent;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.nms.nmsrocketlaunchermod.*;
 import com.nms.nmsrocketlaunchermod.entity.ModEntities;
 import com.nms.nmsrocketlaunchermod.item.ModItems;
 
+import net.fabricmc.api.ModInitializer;
+import net.minecraft.sound.SoundEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 

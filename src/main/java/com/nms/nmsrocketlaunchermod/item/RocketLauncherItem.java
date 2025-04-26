@@ -1,12 +1,12 @@
 package com.nms.nmsrocketlaunchermod.item;
 
+import com.nms.nmsrocketlaunchermod.ModEnchantments;
+import com.nms.nmsrocketlaunchermod.entity.RocketEntity;
+
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
@@ -19,14 +19,9 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-
-import com.nms.nmsrocketlaunchermod.ModEnchantments;
-import com.nms.nmsrocketlaunchermod.entity.RocketEntity;
-
 import java.util.List;
 
 public class RocketLauncherItem extends Item {

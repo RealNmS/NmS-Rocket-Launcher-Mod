@@ -1,5 +1,8 @@
 package com.nms.nmsrocketlaunchermod.client.render;
 
+import com.nms.nmsrocketlaunchermod.RocketLauncherMod;
+import com.nms.nmsrocketlaunchermod.client.model.RocketLauncherModel;
+
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.math.MatrixStack;
@@ -8,10 +11,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3f;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
-
-import com.nms.nmsrocketlaunchermod.RocketLauncherMod;
-import com.nms.nmsrocketlaunchermod.client.model.RocketLauncherModel;
-
 import net.minecraft.client.render.RenderLayer;
 
 public class RocketLauncherRenderer {
