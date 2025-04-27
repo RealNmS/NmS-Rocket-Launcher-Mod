@@ -1,5 +1,7 @@
 # NmS' Rocket Launcher Mod
 
+[![Download from Modrinth](https://img.shields.io/badge/Download-Modrinth-brightgreen?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/nms-rocket-launcher-mod) [![Download from GitHub](https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/RealNmS/NmS-Rocket-Launcher-Mod/releases/latest)
+
 This mod adds a craftable Rocket Launcher that fires rideable rockets you can steer mid-air. Includes the Reload enchantment to reduce cooldown time. Designed to blend seamlessly with vanilla Minecraft while adding explosive fun!
 
 <center>
