@@ -1,0 +1,36 @@
+{
+  "parent": "nmsrocketlaunchermod:root",
+  "display": {
+    "title": "The Floor is Lava",
+    "description": "Ride your rocket in the nether!",
+    "icon": {
+      "item": "minecraft:lava_bucket"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "nether_rocket_ride": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "nmsrocketlaunchermod:rocket"
+              },
+              "location": {
+                "dimension": "minecraft:the_nether"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["nether_rocket_ride"]]
+}
