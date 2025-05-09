@@ -1,7 +1,7 @@
 {
   "display": {
     "title": "Rocket Engineering",
-    "description": "Craft your first rocket launcher!",
+    "description": "Craft your first rocket launcher",
     "background": "minecraft:textures/block/iron_block.png",
     "icon": {
       "item": "nmsrocketlaunchermod:rocket_launcher"

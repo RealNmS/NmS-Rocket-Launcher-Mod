@@ -2,7 +2,7 @@
   "parent": "nmsrocketlaunchermod:root",
   "display": {
     "title": "To Infinity and Beyond",
-    "description": "Fly in the end with a rocket launcher!",
+    "description": "Fly in the end with a rocket launcher",
     "icon": {
       "item": "minecraft:ender_pearl"
     },

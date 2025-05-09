@@ -2,7 +2,7 @@
   "parent": "nmsrocketlaunchermod:root",
   "display": {
     "title": "The Floor is Lava",
-    "description": "Ride your rocket in the nether!",
+    "description": "Ride your rocket in the nether",
     "icon": {
       "item": "minecraft:lava_bucket"
     },
