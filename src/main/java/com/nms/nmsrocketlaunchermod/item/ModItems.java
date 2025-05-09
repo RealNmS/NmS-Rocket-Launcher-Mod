@@ -13,7 +13,7 @@ public class ModItems {
     public static final Item ROCKET_LAUNCHER = new RocketLauncherItem(
             new Item.Settings().maxCount(1).group(ItemGroup.COMBAT));
 
-    public static void registerItems() { // Use the original method name
+    public static void registerItems() {
         Registry.register(
                 Registry.ITEM,
                 new Identifier(RocketLauncherMod.MOD_ID, "rocket_launcher"),

@@ -47,17 +47,15 @@ public class RocketLauncherItem extends Item {
 
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(Items.IRON_INGOT); // Allow repair with iron
+        return ingredient.isOf(Items.IRON_INGOT);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
-        // Get reload enchantment level
         int reloadLevel = EnchantmentHelper.getLevel(ModEnchantments.RELOAD, stack);
 
-        // Calculate adjusted cooldown
         int adjustedCooldown = (int) (BASE_COOLDOWN * (1 - COOLDOWN_REDUCTION_PER_LEVEL * reloadLevel));
         adjustedCooldown = Math.max(5, adjustedCooldown); // Minimum 0.25 second cooldown
 
@@ -65,13 +63,11 @@ public class RocketLauncherItem extends Item {
             return TypedActionResult.fail(stack);
         }
 
-        // Client-side particles (shooter's perspective)
         if (world.isClient()) {
             spawnShootParticles(user);
         }
 
         if (!world.isClient()) {
-            // Spawn rocket
             RocketEntity rocket = new RocketEntity(world, user);
             Vec3d lookVec = user.getRotationVec(1.0F).normalize();
 
@@ -85,24 +81,22 @@ public class RocketLauncherItem extends Item {
                     user.getZ());
 
             world.playSound(
-                    null, // No specific player
+                    null,
                     user.getX(), user.getY(), user.getZ(),
                     SHOOT_SOUND,
                     SoundCategory.PLAYERS,
-                    1.0F, // Volume
-                    0.8F + world.random.nextFloat() * 0.4F // Pitch variation
-            );
+                    1.0F,
+                    0.8F + world.random.nextFloat() * 0.4F);
 
             world.spawnEntity(rocket);
             user.startRiding(rocket);
             stack.damage(1, user, (p) -> p.sendToolBreakStatus(hand));
 
-            // Server-side particles (visible to all players)
             ServerWorld serverWorld = (ServerWorld) world;
             spawnShootParticles(serverWorld, user);
         }
 
-        user.getItemCooldownManager().set(this, adjustedCooldown); // Set dynamic cooldown
+        user.getItemCooldownManager().set(this, adjustedCooldown);
         return TypedActionResult.success(stack, world.isClient());
     }
 

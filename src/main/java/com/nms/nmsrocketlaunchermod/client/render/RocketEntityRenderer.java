@@ -28,30 +28,21 @@ public class RocketEntityRenderer extends EntityRenderer<RocketEntity> {
             VertexConsumerProvider vertexConsumers, int light) {
         matrices.push();
 
-        // Position adjustment
         matrices.translate(0, 0.15, 0);
 
-        // Get the actual rotation from player's look direction
         if (!entity.getPassengerList().isEmpty() && entity.getPassengerList().get(0) instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entity.getPassengerList().get(0);
 
-            // Use player's precise look angles
             float pitch = player.getPitch(tickDelta);
             float adjustedYaw = player.getYaw(tickDelta);
 
-            // Apply full rotation
             matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(90 - adjustedYaw));
-            matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(90 + pitch)); // Negative for correct pitch
+            matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(90 + pitch));
         } else {
-            // Fallback to entity rotation when no player
             matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(90 - yaw));
             matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(90 + entity.getPitch()));
         }
 
-        // Rotate 90 degrees forward to make firework item point correctly
-        // matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(90));
-
-        // Scale up
         matrices.scale(3.5F, 3.5F, 3.5F);
 
         MinecraftClient.getInstance().getItemRenderer().renderItem(

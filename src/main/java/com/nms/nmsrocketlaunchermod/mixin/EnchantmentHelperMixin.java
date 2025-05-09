@@ -31,13 +31,11 @@ public abstract class EnchantmentHelperMixin {
     private static boolean isAcceptableItem(EnchantmentTarget enchantmentTarget, Item item) {
         ItemStack stack = new ItemStack(item);
 
-        // Special case for "Reload" enchantment
         if (item == ROCKET_LAUNCHER) {
             return currentEnchantment.isAcceptableItem(stack) || currentEnchantment == MENDING
                     || currentEnchantment == UNBREAKING;
         }
 
-        // Default behavior for other enchantments
         return enchantmentTarget.isAcceptableItem(item);
     }
 }

@@ -33,7 +33,6 @@ public class ModEnchantments {
     }
 
     public static void registerEnchantments() {
-        // Register during mod initialization
         RELOAD = Registry.register(
                 Registry.ENCHANTMENT,
                 new Identifier("nmsrocketlaunchermod", "reload"),

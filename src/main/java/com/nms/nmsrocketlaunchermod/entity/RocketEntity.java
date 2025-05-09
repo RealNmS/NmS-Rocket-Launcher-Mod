@@ -23,7 +23,6 @@ import net.minecraft.entity.player.PlayerEntity;
 public class RocketEntity extends Entity {
     private LivingEntity owner;
 
-    // Track velocity components as separate floats
     private static final TrackedData<Float> VELOCITY_X = DataTracker.registerData(RocketEntity.class,
             TrackedDataHandlerRegistry.FLOAT);
     private static final TrackedData<Float> VELOCITY_Y = DataTracker.registerData(RocketEntity.class,
@@ -60,7 +59,6 @@ public class RocketEntity extends Entity {
     public void tick() {
         super.tick();
 
-        // Play flight sound every 20 ticks (1 second)
         if (!this.world.isClient && this.soundCooldown-- <= 0) {
             this.world.playSound(
                     null,
@@ -78,7 +76,6 @@ public class RocketEntity extends Entity {
             Vec3d velocity = this.getVelocity();
 
             if (this.getPassengerList().isEmpty() && this.age > 5) {
-                // velocity = velocity.multiply(1);
                 this.setVelocity(velocity);
             }
 
@@ -91,7 +88,6 @@ public class RocketEntity extends Entity {
                 this.onCollision(null);
             }
 
-            // Update tracked velocity components
             this.dataTracker.set(VELOCITY_X, (float) velocity.x);
             this.dataTracker.set(VELOCITY_Y, (float) velocity.y);
             this.dataTracker.set(VELOCITY_Z, (float) velocity.z);
@@ -101,7 +97,6 @@ public class RocketEntity extends Entity {
                 this.setVelocity(velocity.normalize().multiply(maxSpeed));
             }
         } else {
-            // Read tracked velocity components
             float vx = this.dataTracker.get(VELOCITY_X);
             float vy = this.dataTracker.get(VELOCITY_Y);
             float vz = this.dataTracker.get(VELOCITY_Z);
@@ -122,16 +117,14 @@ public class RocketEntity extends Entity {
                         .subtract(dir.multiply(PARTICLE_OFFSET)) // Offset behind rocket
                         .add(0, VERTICAL_OFFSET, 0); // Adjust vertical position
 
-                // Flame core particles
                 this.world.addParticle(ParticleTypes.FLAME,
                         particlePos.x, particlePos.y, particlePos.z,
                         0, 0, 0);
 
-                // Smoke trail particles
-                if (this.age % 2 == 0) { // Every 3 ticks
+                if (this.age % 2 == 0) {
                     this.world.addParticle(ParticleTypes.SMOKE,
                             particlePos.x, particlePos.y, particlePos.z,
-                            (this.random.nextFloat() - 0.5) * 0.1, // Random spread
+                            (this.random.nextFloat() - 0.5) * 0.1,
                             0.05,
                             (this.random.nextFloat() - 0.5) * 0.1);
                 }
@@ -146,20 +139,16 @@ public class RocketEntity extends Entity {
                 float vz = this.dataTracker.get(VELOCITY_Z);
                 Vec3d velocity = new Vec3d(vx, vy, vz);
 
-                // Get look direction
                 Vec3d lookVec = player.getRotationVec(1.0F).normalize();
 
-                // Steering parameters
                 float steeringStrength = 0.15f;
-                double speedRetention = 0.85; // Keep 85% of current speed
+                double speedRetention = 0.85;
 
-                // Calculate new velocity
                 Vec3d steering = lookVec.multiply(steeringStrength);
                 Vec3d newVelocity = velocity
                         .multiply(speedRetention)
                         .add(steering);
 
-                // Limit maximum speed
                 double maxSpeed = 4.0;
                 if (newVelocity.lengthSquared() > maxSpeed * maxSpeed) {
                     newVelocity = newVelocity.normalize().multiply(maxSpeed);
@@ -228,11 +217,9 @@ public class RocketEntity extends Entity {
     @Override
     public void updatePassengerPosition(Entity passenger) {
         if (this.hasPassenger(passenger)) {
-            // Make passenger position match rocket orientation
             Vec3d offset = new Vec3d(0, this.getMountedHeightOffset(), 0);
             passenger.setPosition(this.getX() + offset.x, this.getY() + offset.y, this.getZ() + offset.z);
 
-            // Sync rotation if passenger is player
             if (passenger instanceof PlayerEntity) {
                 this.setYaw(passenger.getYaw());
                 this.setPitch(passenger.getPitch());

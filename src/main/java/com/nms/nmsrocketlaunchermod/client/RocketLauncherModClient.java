@@ -9,7 +9,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 public class RocketLauncherModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        // Register the rocket entity renderer
         EntityRendererRegistry.register(ModEntities.ROCKET, RocketEntityRenderer::new);
     }
 }
