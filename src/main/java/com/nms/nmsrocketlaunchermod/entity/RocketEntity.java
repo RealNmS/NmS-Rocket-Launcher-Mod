@@ -172,16 +172,15 @@ public class RocketEntity extends Entity {
 
     protected void onCollision(HitResult hitResult) {
         if (!this.world.isClient) {
-            // Now this line will work
+            Entity source = this.owner != null ? this.owner : this;
             this.world.createExplosion(
-                    this,
+                    source,
                     this.getX(),
                     this.getY(),
                     this.getZ(),
                     16.0F,
                     true,
-                    Explosion.DestructionType.BREAK // Correctly referenced
-            );
+                    Explosion.DestructionType.BREAK);
             this.discard();
         }
     }
