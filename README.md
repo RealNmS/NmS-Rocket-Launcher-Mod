@@ -27,6 +27,12 @@ This mod adds a craftable Rocket Launcher that fires rideable rockets you can st
 - Reduces cooldown by 20% per level (up to Level 3 = 60% faster reload).
 - Obtainable via: Enchanting Table, Anvil _(enchanted books)_, Librarian Villagers.
 
+### 🏆 Advancements
+
+- A small set of advancements to give you fun, straightforward goals using the Rocket Launcher.
+- Examples include riding a rocket in the End or Nether, or enchanting it with Reload III.
+- More may be added in future updates based on feedback and suggestions!
+
 ## Instalation
 
 - **Requires Fabric API** for Minecraft 1.18.2.
