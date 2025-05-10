@@ -161,6 +161,8 @@ public class RocketEntity extends Entity {
         }
     }
 
+    // this method was pain in the ass to get working, idk how it works lol, thank
+    // god for copilot
     protected void onCollision(HitResult hitResult) {
         if (!this.world.isClient) {
             float explosionPower = 12.0F;
