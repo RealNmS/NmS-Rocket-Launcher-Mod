@@ -175,21 +175,17 @@ public class RocketEntity extends Entity {
                 if (distance <= explosionPower) {
                     float damage = explosionPower * (1.0F - (float) (distance / explosionPower));
 
-                    // Use owner for damage source if available
                     if (this.owner != null) {
-                        // Proper damage source for explosion attribution
                         DamageSource source = DamageSource.explosion(this.owner);
 
                         entity.damage(source, damage);
                         entity.setAttacker(this.owner);
                     } else {
-                        // Fallback to generic explosion damage
                         entity.damage(DamageSource.explosion((LivingEntity) null), damage);
                     }
                 }
             }
 
-            // Create visual explosion
             this.world.createExplosion(
                     this,
                     this.getX(),
