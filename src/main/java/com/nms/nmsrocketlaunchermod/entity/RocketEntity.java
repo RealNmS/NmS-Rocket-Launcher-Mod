@@ -163,7 +163,7 @@ public class RocketEntity extends Entity {
 
     protected void onCollision(HitResult hitResult) {
         if (!this.world.isClient) {
-            float explosionPower = 16.0F;
+            float explosionPower = 12.0F;
 
             List<LivingEntity> entities = this.world.getEntitiesByClass(
                     LivingEntity.class,
