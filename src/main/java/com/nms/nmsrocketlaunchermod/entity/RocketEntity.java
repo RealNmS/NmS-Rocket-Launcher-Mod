@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.world.explosion.Explosion;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -19,6 +20,7 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
+import java.util.List;
 
 public class RocketEntity extends Entity {
     private LivingEntity owner;
@@ -161,15 +163,42 @@ public class RocketEntity extends Entity {
 
     protected void onCollision(HitResult hitResult) {
         if (!this.world.isClient) {
-            Entity source = this.owner != null ? this.owner : this;
+            float explosionPower = 16.0F;
+
+            List<LivingEntity> entities = this.world.getEntitiesByClass(
+                    LivingEntity.class,
+                    this.getBoundingBox().expand(explosionPower),
+                    e -> true);
+
+            for (LivingEntity entity : entities) {
+                double distance = this.distanceTo(entity);
+                if (distance <= explosionPower) {
+                    float damage = explosionPower * (1.0F - (float) (distance / explosionPower));
+
+                    // Use owner for damage source if available
+                    if (this.owner != null) {
+                        // Proper damage source for explosion attribution
+                        DamageSource source = DamageSource.explosion(this.owner);
+
+                        entity.damage(source, damage);
+                        entity.setAttacker(this.owner);
+                    } else {
+                        // Fallback to generic explosion damage
+                        entity.damage(DamageSource.explosion((LivingEntity) null), damage);
+                    }
+                }
+            }
+
+            // Create visual explosion
             this.world.createExplosion(
-                    source,
+                    this,
                     this.getX(),
                     this.getY(),
                     this.getZ(),
-                    16.0F,
+                    explosionPower,
                     true,
                     Explosion.DestructionType.BREAK);
+
             this.discard();
         }
     }
