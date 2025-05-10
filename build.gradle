@@ -79,3 +79,7 @@ publishing {
 tasks.withType(JavaCompile) {
     options.compilerArgs << "-Xlint:-missing-explicit-ctor"
 }
+
+remapJar {
+    archiveFileName = "${archivesBaseName}-${version}-${minecraft_version}.jar"
+}
