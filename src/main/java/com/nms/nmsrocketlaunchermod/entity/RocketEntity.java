@@ -4,7 +4,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.world.explosion.Explosion;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -21,6 +20,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
 import java.util.List;
+import net.minecraft.entity.damage.DamageSource;
 
 public class RocketEntity extends Entity {
     private LivingEntity owner;
@@ -38,6 +38,14 @@ public class RocketEntity extends Entity {
     private static final SoundEvent FLIGHT_SOUND = new SoundEvent(
             new Identifier("nmsrocketlaunchermod", "rocket_loop"));
     private int soundCooldown = 0;
+
+    public static DamageSource rocketExplosion(LivingEntity owner) {
+        if (owner != null) {
+            return DamageSource.explosion(owner);
+        } else {
+            return DamageSource.explosion((LivingEntity) null);
+        }
+    }
 
     public RocketEntity(EntityType<? extends RocketEntity> type, World world) {
         super(type, world);
@@ -178,12 +186,12 @@ public class RocketEntity extends Entity {
                     float damage = explosionPower * (1.0F - (float) (distance / explosionPower));
 
                     if (this.owner != null) {
-                        DamageSource source = DamageSource.explosion(this.owner);
+                        DamageSource source = rocketExplosion(this.owner);
 
                         entity.damage(source, damage);
                         entity.setAttacker(this.owner);
                     } else {
-                        entity.damage(DamageSource.explosion((LivingEntity) null), damage);
+                        entity.damage(rocketExplosion(null), damage);
                     }
                 }
             }

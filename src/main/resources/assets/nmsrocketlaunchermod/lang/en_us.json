@@ -4,5 +4,7 @@
   "subtitles.nmsrocketlaunchermod.rocket_loop": "Rocket hums",
   "tooltip.nmsrocketlaunchermod.cooldown": "\u00A78Cooldown: %s seconds",
   "enchantment.nmsrocketlaunchermod.reload": "Reload",
-  "enchantment.nmsrocketlaunchermod.reload.desc": "Reduces cooldown by 20% per level"
+  "enchantment.nmsrocketlaunchermod.reload.desc": "Reduces cooldown by 20% per level",
+  "death.attack.rocket": "%1$s was blown up by a rocket",
+  "death.attack.rocket.player": "%1$s was blown up by %2$s's rocket"
 }
