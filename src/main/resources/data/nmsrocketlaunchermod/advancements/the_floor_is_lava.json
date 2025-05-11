@@ -2,7 +2,7 @@
   "parent": "nmsrocketlaunchermod:feather_falling_not_included",
   "display": {
     "title": "The Floor is Lava",
-    "description": "Fly in the nether with a rocket launcher",
+    "description": "Fly in the Nether with a rocket launcher",
     "icon": {
       "item": "minecraft:lava_bucket"
     },
