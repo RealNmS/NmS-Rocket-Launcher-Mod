@@ -1,10 +1,10 @@
 {
-  "parent": "nmsrocketlaunchermod:feather_falling_not_included",
+  "parent": "nmsrocketlaunchermod:root",
   "display": {
-    "title": "The Floor is Lava",
-    "description": "Ride your rocket in the nether",
+    "title": "Feather Falling Not Included",
+    "description": "Fly with a rocket launcher for the first time",
     "icon": {
-      "item": "minecraft:lava_bucket"
+      "item": "minecraft:grass_block"
     },
     "frame": "task",
     "show_toast": true,
@@ -12,7 +12,7 @@
     "hidden": false
   },
   "criteria": {
-    "nether_rocket_ride": {
+    "rocket_ride": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -24,7 +24,7 @@
                 "type": "nmsrocketlaunchermod:rocket"
               },
               "location": {
-                "dimension": "minecraft:the_nether"
+                "dimension": "minecraft:overworld"
               }
             }
           }
@@ -32,5 +32,5 @@
       }
     }
   },
-  "requirements": [["nether_rocket_ride"]]
+  "requirements": [["rocket_ride"]]
 }

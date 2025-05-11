@@ -1,5 +1,5 @@
 {
-  "parent": "nmsrocketlaunchermod:root",
+  "parent": "nmsrocketlaunchermod:feather_falling_not_included",
   "display": {
     "title": "To Infinity and Beyond",
     "description": "Fly in the end with a rocket launcher",
