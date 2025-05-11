@@ -2,7 +2,7 @@
   "parent": "nmsrocketlaunchermod:root",
   "display": {
     "title": "Feather Falling Not Included",
-    "description": "Fly with a rocket launcher for the first time",
+    "description": "Fly for the first time with a rocket launcher",
     "icon": {
       "item": "minecraft:grass_block"
     },
