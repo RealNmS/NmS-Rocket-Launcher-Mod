@@ -8,7 +8,7 @@
       "nbt": "{Enchantments:[{id:\"nmsrocketlaunchermod:reload\", lvl:3s}]}"
     },
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
