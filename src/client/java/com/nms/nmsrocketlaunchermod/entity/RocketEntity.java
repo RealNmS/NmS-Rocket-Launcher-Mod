@@ -178,7 +178,7 @@ public class RocketEntity extends Entity {
             }
 
             this.world.createExplosion(this, this.getX(), this.getY(), this.getZ(),
-                    explosionPower, World.ExplosionSourceType.MOB);
+                    explosionPower, true, World.ExplosionSourceType.MOB);
 
             this.discard();
         }
