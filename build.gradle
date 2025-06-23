@@ -90,5 +90,5 @@ publishing {
 }
 
 remapJar {
-    archiveFileName = "${archivesBaseName}-${version}+${minecraft_version}.jar"
+    archiveFileName = "${project.archives_base_name}-${version}+${minecraft_version}.jar"
 }
