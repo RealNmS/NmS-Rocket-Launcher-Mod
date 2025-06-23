@@ -13,7 +13,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
-import net.minecraft.util.math.Vec3d;
 
 public class RocketEntityRenderer extends EntityRenderer<RocketEntity> {
     private static final ItemStack ROCKET_ITEM = new ItemStack(Items.FIREWORK_ROCKET);
