@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "nmsrocketlaunchermod",
-  "version": "1.0.3",
+  "version": "${version}",
   "name": "NmS' Rocket Launcher Mod",
   "description": "Adds a rocket launcher that shoots rockets you can ride!",
   "authors": ["NmS", "MichalBr"],
