@@ -1,7 +1,6 @@
 package com.nms.nmsrocketlaunchermod.entity;
 
 import net.minecraft.entity.*;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -18,7 +17,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraft.world.explosion.Explosion;
 
 import java.util.List;
 
@@ -169,8 +167,6 @@ public class RocketEntity extends Entity {
             for (LivingEntity entity : entities) {
                 double distance = this.distanceTo(entity);
                 if (distance <= explosionPower) {
-                    float damage = explosionPower * (1.0F - (float) (distance / explosionPower));
-                    entity.damage(createExplosionDamageSource(), damage);
                     if (owner != null) {
                         entity.setAttacker(owner);
                     }
@@ -182,13 +178,6 @@ public class RocketEntity extends Entity {
 
             this.discard();
         }
-    }
-
-    private DamageSource createExplosionDamageSource() {
-        Explosion.DestructionType destructionType = Explosion.DestructionType.DESTROY;
-        Explosion explosion = new Explosion(this.world, this.owner, this.getX(), this.getY(), this.getZ(), 0,
-                false, destructionType);
-        return explosion.getDamageSource();
     }
 
     @Override
