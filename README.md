@@ -35,7 +35,7 @@ This mod adds a craftable Rocket Launcher that fires rideable rockets you can st
 
 ## Instalation
 
-- **Requires Fabric API** for Minecraft 1.18.2.
+- **Requires Fabric API** latest version.
 - Download the _.jar_ file and place it in your _mods_ folder.
 
 ## Planned Features
