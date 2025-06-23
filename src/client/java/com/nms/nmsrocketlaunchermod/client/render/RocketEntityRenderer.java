@@ -27,16 +27,16 @@ public class RocketEntityRenderer extends EntityRenderer<RocketEntity> {
             VertexConsumerProvider vertexConsumers, int light) {
         matrices.push();
 
-        matrices.translate(0, 0.15, 0);
+        matrices.translate(0, 0.50, 0);
 
         if (!entity.getPassengerList().isEmpty() && entity.getPassengerList().get(0) instanceof PlayerEntity player) {
             float pitch = player.getPitch(tickDelta);
             float adjustedYaw = player.getYaw(tickDelta);
 
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(90 - adjustedYaw));
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-adjustedYaw));
             matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90 + pitch));
         } else {
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(90 - yaw));
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-yaw));
             matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90 + entity.getPitch()));
         }
 
