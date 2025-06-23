@@ -32,7 +32,7 @@ public class RocketEntity extends Entity {
     private static final TrackedData<Float> VELOCITY_Z = DataTracker.registerData(RocketEntity.class,
             TrackedDataHandlerRegistry.FLOAT);
 
-    private static final double PARTICLE_OFFSET = 0.5;
+    private static final double PARTICLE_OFFSET = 1.2;
     private static final double VERTICAL_OFFSET = 0.5;
 
     private static final SoundEvent FLIGHT_SOUND = SoundEvent.of(new Identifier("nmsrocketlaunchermod", "rocket_loop"));
@@ -105,14 +105,32 @@ public class RocketEntity extends Entity {
                         .subtract(dir.multiply(PARTICLE_OFFSET))
                         .add(0, VERTICAL_OFFSET, 0);
 
-                this.world.addParticle(ParticleTypes.FLAME, particlePos.x, particlePos.y, particlePos.z, 0, 0, 0);
+                for (int i = 0; i < 4; i++) {
+                    double offsetX = (this.random.nextFloat() - 0.5) * 0.1;
+                    double offsetY = (this.random.nextFloat() - 0.5) * 0.1;
+                    double offsetZ = (this.random.nextFloat() - 0.5) * 0.1;
+                    this.world.addParticle(ParticleTypes.FLAME,
+                            particlePos.x,
+                            particlePos.y,
+                            particlePos.z,
+                            offsetX,
+                            offsetY,
+                            offsetZ);
+                }
 
                 if (this.age % 2 == 0) {
-                    this.world.addParticle(ParticleTypes.SMOKE,
-                            particlePos.x, particlePos.y, particlePos.z,
-                            (this.random.nextFloat() - 0.5) * 0.1,
-                            0.05,
-                            (this.random.nextFloat() - 0.5) * 0.1);
+                    for (int i = 0; i < 3; i++) {
+                        double spreadX = (this.random.nextFloat() - 0.5) * 0.2;
+                        double spreadY = this.random.nextFloat() * 0.1;
+                        double spreadZ = (this.random.nextFloat() - 0.5) * 0.2;
+                        this.world.addParticle(ParticleTypes.LARGE_SMOKE,
+                                particlePos.x,
+                                particlePos.y,
+                                particlePos.z,
+                                spreadX,
+                                spreadY,
+                                spreadZ);
+                    }
                 }
             }
         }
