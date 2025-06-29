@@ -1,6 +1,40 @@
 # NmS' Rocket Launcher Mod
 
-[![Download from Modrinth](https://img.shields.io/badge/Download-Modrinth-brightgreen?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/nms-rocket-launcher-mod) [![Download from GitHub](https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/RealNmS/NmS-Rocket-Launcher-Mod/releases/latest)
+<p align="center">
+
+  <!-- 🟢 Modrinth Stats -->
+  <a href="https://modrinth.com/mod/nms-rocket-launcher-mod" style="text-decoration:none;">
+    <img alt="Download from Modrinth" style="margin:4px;" src="https://img.shields.io/badge/Download-Modrinth-1bd96a?style=for-the-badge&logo=modrinth">
+  </a>
+  <a href="https://modrinth.com/mod/nms-rocket-launcher-mod" style="text-decoration:none;">
+    <img alt="Modrinth Downloads" style="margin:4px;" src="https://img.shields.io/modrinth/dt/nms-rocket-launcher-mod?style=for-the-badge&color=1bd96a&label=Modrinth%20Downloads&logo=modrinth">
+  </a>
+  <a href="https://modrinth.com/mod/nms-rocket-launcher-mod" style="text-decoration:none;">
+    <img alt="Modrinth Followers" style="margin:4px;" src="https://img.shields.io/modrinth/followers/nms-rocket-launcher-mod?style=for-the-badge&color=1bd96a&label=Modrinth%20Followers&logo=modrinth">
+  </a>
+
+  <!-- 🔵 GitHub Stats -->
+  <br>
+  <a href="https://github.com/RealNmS/NmS-Rocket-Launcher-Mod/releases/latest" style="text-decoration:none;">
+    <img alt="Download from GitHub" style="margin:4px;" src="https://img.shields.io/badge/Download-GitHub-181717?style=for-the-badge&logo=github">
+  </a> 
+  <a href="https://github.com/RealNmS/NmS-Rocket-Launcher-Mod/releases" style="text-decoration:none;">
+    <img alt="GitHub Downloads" style="margin:4px;" src="https://img.shields.io/github/downloads/RealNmS/NmS-Rocket-Launcher-Mod/total?style=for-the-badge&color=181717&label=GitHub%20Downloads&logo=github">
+  </a> 
+  <a href="https://github.com/RealNmS/NmS-Rocket-Launcher-Mod/stargazers" style="text-decoration:none;">
+    <img alt="GitHub stars" style="margin:4px;" src="https://img.shields.io/github/stars/RealNmS/NmS-Rocket-Launcher-Mod?style=for-the-badge&logo=github&label=Stars&color=181717">
+  </a> 
+  <a href="https://github.com/RealNmS/NmS-Rocket-Launcher-Mod" style="text-decoration:none;">
+    <img alt="Repo views" style="margin:4px;" src="https://komarev.com/ghpvc/?username=RealNmS&style=for-the-badge&color=181717&label=Repo%20Views">
+  </a>
+
+  <!-- ☕ Ko-fi Support -->
+  <br>
+  <a href="https://ko-fi.com/F2F51F8OO6" style="text-decoration:none;">
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" style="margin-top:8px;" />
+  </a>
+
+</p>
 
 This mod adds a craftable Rocket Launcher that fires rideable rockets you can steer mid-air. Includes the Reload enchantment to reduce cooldown time. Designed to blend seamlessly with vanilla Minecraft while adding explosive fun!
 
