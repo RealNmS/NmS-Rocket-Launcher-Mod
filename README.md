@@ -1,4 +1,7 @@
-# NmS' Rocket Launcher Mod
+<p align="center">
+  <!-- <img src="https://raw.githubusercontent.com/RealNmS/NmS-Rocket-Launcher-Mod/main/src/other/icon.png" alt="Mod Icon" width="64"> -->
+  <h1 align="center">NmS' Rocket Launcher Mod</h1>
+</p>
 
 <p align="center">
 
