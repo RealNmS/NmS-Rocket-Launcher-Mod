@@ -77,7 +77,11 @@ This mod adds a craftable Rocket Launcher that fires rideable rockets you can st
 
 ## Planned Features
 
-- **Ports to newer versions:** ...like 1.19, 1.20 and 1.21.
+- ~~**Ports to newer versions:** ...like 1.19, 1.20 and 1.21.~~ ➖
 - ~~**Achievements/Advancements:** Unlockable milestones for rocket usage.~~ ✔️
 - ~~**GitHub:** Releasing this project on Github, making it open-source, also allowing you to have a place to tell me any issues you have with the mod.~~ ✔️
 - ~~**Configurable Settings:** Adjust explosion radius, durability, cooldown, and more...~~ ❌
+
+## Project Status  
+This project is now considered **feature-complete**. No further updates or new content are planned beyond maintenance or minor fixes.
+However, I remain open to **user feedback** and potential contributions through **GitHub pull requests**, which may influence future adjustments or improvements.
